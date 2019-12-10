@@ -5,11 +5,11 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class TestConnexionJdbc {
+public class TestConnexionMysqlCloud {
 
 	public static void main(String[] args) {
 		try {
-			ResourceBundle prop = ResourceBundle.getBundle("DataBase");
+			ResourceBundle prop = ResourceBundle.getBundle("DataBaseCloud");
 			String url 			= prop.getString("url");
 			String user 		= prop.getString("user");
 			String passwd 		= prop.getString("passwd");
