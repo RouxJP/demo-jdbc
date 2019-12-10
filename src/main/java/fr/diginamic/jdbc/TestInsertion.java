@@ -6,8 +6,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
+import fr.diginamic.jdbc.dao.FournisseurDaoJdbc;
+import fr.diginamic.jdbc.entities.Fournisseur;
+
 public class TestInsertion {
 	public static void main(String[] args) {
+		/**
 		Statement		stat = null;
 		Connection		con  = null ;
 		
@@ -34,6 +38,12 @@ public class TestInsertion {
 		} finally {
 			
 		}
+		**/
+		FournisseurDaoJdbc fDaoJdbc = new FournisseurDaoJdbc();
+		//fDaoJdbc.insert( new Fournisseur( 4, "La Maison de la Peinture"));
+		fDaoJdbc.insert( new Fournisseur( 5, "L''espace de création"));
+		fr.diginamic.jdbc.dao.FournisseurDaoJdbc.CloseConnection();
+
 
 	}
 

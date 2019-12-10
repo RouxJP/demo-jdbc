@@ -6,8 +6,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
+import fr.diginamic.jdbc.dao.FournisseurDaoJdbc;
+import fr.diginamic.jdbc.entities.Fournisseur;
+
 public class TestUpdate {
 	public static void main(String[] args) {
+		/**
 		Statement		stat = null;
 		Connection		con  = null ;
 		
@@ -34,6 +38,10 @@ public class TestUpdate {
 		} finally {
 			
 		}
+		**/
+		FournisseurDaoJdbc fDaoJdbc = new FournisseurDaoJdbc();
+		fDaoJdbc.update( 4, "La Maison des Peintures");
+		fr.diginamic.jdbc.dao.FournisseurDaoJdbc.CloseConnection();
 
 	}
 
