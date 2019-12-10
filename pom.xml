@@ -3,7 +3,13 @@
   <groupId>fr.diginamic</groupId>
   <artifactId>demo-jdbc</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
+	<dependencies>
+		<dependency>
+			<groupId>org.mariadb.jdbc</groupId>
+			<artifactId>mariadb-java-client</artifactId>
+			<version>2.4.0</version>
+		</dependency>
+	</dependencies>
 	<build>
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<plugins>
