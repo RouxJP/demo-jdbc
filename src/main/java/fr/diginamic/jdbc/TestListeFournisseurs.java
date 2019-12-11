@@ -1,8 +1,8 @@
 package fr.diginamic.jdbc;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import fr.diginamic.jdbc.dao.ConnectionBaseCompta;
 import fr.diginamic.jdbc.dao.FournisseurDaoJdbc;
 import fr.diginamic.jdbc.entities.Fournisseur;
 
@@ -17,13 +17,15 @@ public class TestListeFournisseurs {
 			System.out.println("id : " + fou.getId() + "/ nom : " + fou.getNom());
 		}
 		**/
+		ConnectionBaseCompta conBaseCompta = new ConnectionBaseCompta();
 		
 		FournisseurDaoJdbc fDaoJdbc = new FournisseurDaoJdbc();
 		List<Fournisseur> lstFou =  fDaoJdbc.extraire();
 		for( Fournisseur fou : lstFou) {
 			System.out.println("id : " + fou.getId() + "/ nom : " + fou.getNom());
 		}
-		fr.diginamic.jdbc.dao.FournisseurDaoJdbc.CloseConnection();
+		
+		conBaseCompta.CloseConnection();
 
 		
 	}

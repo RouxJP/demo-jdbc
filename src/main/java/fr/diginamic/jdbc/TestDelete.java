@@ -1,13 +1,10 @@
 package fr.diginamic.jdbc;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ResourceBundle;
 
+
+import fr.diginamic.jdbc.dao.ConnectionBaseCompta;
 import fr.diginamic.jdbc.dao.FournisseurDaoJdbc;
-import fr.diginamic.jdbc.entities.Fournisseur;
+
 
 public class TestDelete {
 	public static void main(String[] args) {
@@ -39,9 +36,13 @@ public class TestDelete {
 			
 		}
         **/
+		ConnectionBaseCompta conBaseCompta = new ConnectionBaseCompta();
+		
 		FournisseurDaoJdbc fDaoJdbc = new FournisseurDaoJdbc();
-		fDaoJdbc.delete( new Fournisseur( 4, ""));
-		fr.diginamic.jdbc.dao.FournisseurDaoJdbc.CloseConnection();
+		fDaoJdbc.delete( 4);
+	
+		conBaseCompta.CloseConnection();
+		
 	}
 
 }
