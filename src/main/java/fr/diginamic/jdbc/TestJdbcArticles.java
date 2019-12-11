@@ -10,6 +10,11 @@ import fr.diginamic.jdbc.entities.Fournisseur;
 
 public class TestJdbcArticles {
 
+	/** 
+	 * TP : 06 MIse en place d'une DAO pour Article sur MySql Cloud Compta 
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		ConnectionBaseCompta conBaseCompta = new ConnectionBaseCompta();
 		
